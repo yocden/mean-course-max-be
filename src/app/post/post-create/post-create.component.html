@@ -1,4 +1,21 @@
-<textarea [(ngModel)]="enteredPost"></textarea>
-<hr />
-<button (click)="onPost()">Save</button>
-<p>{{ initialValue }}</p>
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <!--gives access to the form object -->
+
+    <mat-form-field>
+      <input matInput type="text" name="title" ngModel required  #title="ngModel"/>
+      @if (title.invalid) {
+        <mat-error>No title added</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput rows="4" name="content" ngModel required #content="ngModel"></textarea>
+      @if (title.invalid) {
+        <mat-error>No title content added</mat-error>
+      }
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Save Post</button>
+  </form>
+</mat-card>

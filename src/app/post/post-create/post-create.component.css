@@ -1,0 +1,22 @@
+
+textarea {
+  display:block;
+  width: 100%;
+}
+
+
+mat-card {
+  max-width: 600px; /* Optional: Set a max-width for the card */
+  margin: 20px auto; /* Center the card with margin auto */
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+mat-form-field {
+  width: 100%; /* Make form fields occupy the full width */
+  display: block;
+  margin-bottom: 20px; /* Add some space between the fields */
+}
+
+button {
+  width: 100%; /* Make the button occupy the full width */
+}
